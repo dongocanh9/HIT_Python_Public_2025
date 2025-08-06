@@ -58,3 +58,4 @@ day=age*365
 phut=day*1440
 print(f"Bạn đã sống khoảng {day} ngày tương đương khoảng {phut} phút ")
 
+
