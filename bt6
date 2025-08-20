@@ -1,0 +1,80 @@
+number=lambda a,b : max (a,b)
+print(number('z','a'))
+print(number('b','b'))
+#bai2
+def print_y(matrix):
+    y=list(map(list,zip(*matrix)))
+    for row in y:
+       for value in row :
+            print(value,end=" ")
+       print()
+m=int(input("Nhập số hàng"))
+n=int(input("Nhập số cột "))
+matrix=[]
+for i in range(m):
+    row=list(map(int,input(f"Nhập {n} số phần tử cho cột {i+1}:").split()))
+    if len(row) !=n :
+       raise ValueError (f"Hãy nhập đúng{n} số cho cột {i+1}")
+    matrix.append(row)
+print("Ma trận gốc")
+for row in matrix :
+    for value in row :
+      print(value,end=" ")
+    print()
+print("Ma trận chuyển vị ")
+print_y(matrix)
+#bai3
+def calculate (operation,*args):
+    if operation=="add" :
+       return sum(args)
+    elif operation=="multiply":
+        result=1
+        for num in args :
+            result*=num
+        return result
+    elif operation =="max":
+         return max(args)
+    elif operation =="min":
+         return min(args)
+    else :
+         return "Invalid operation"
+def calculate (operation,*args):
+    if operation=="add" :
+       return sum(args)
+    elif operation=="multiply":
+        result=1
+        for num in args :
+            result*=num
+        return result
+    elif operation =="max":
+         return max(args)
+    elif operation =="min" :
+         return min(args)
+    else :
+         return "Invalid operation"
+print (calculate ("add",1,2,3))
+print(calculate("multiply",1,2,3))
+print(calculate("max",1,2,3))
+print(calculate("min",1,2,3))
+print(calculate("hi",1,2,3))
+#bai4
+def format_phone_number(phone):
+    disgit="".join([ch for ch in phone if ch.isdigit()])
+    if len(disgit) !=10 or disgit[0] !="0" :
+        return "Invalid phone number"
+    return"+84"+disgit[1:]
+x = input("Nhập số điện thoại: ")
+print(format_phone_number(x))
+
+
+
+
+
+
+
+
+
+
+
+
+
